@@ -28,7 +28,7 @@ class ListCommentsQuery extends Query<ListCommentsOfIssue> {}
   /* pollInterval={5000} */
 }
 const ListComments: React.SFC<Props> = props => (
-  <ListCommentsQuery query={LIST_COMMENTS}>
+  <ListCommentsQuery query={LIST_COMMENTS} pollInterval={1000}>
     {({ loading, error, data }) => {
       if (loading) return <p>loading...</p>;
 

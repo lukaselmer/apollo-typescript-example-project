@@ -9,7 +9,7 @@ export const addComment = gql`
       clientMutationId
       commentEdge {
         node {
-          id
+          key: id
           bodyText
           author {
             login

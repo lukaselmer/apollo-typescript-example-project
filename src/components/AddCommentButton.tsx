@@ -51,7 +51,7 @@ export class AddCommentButton extends React.Component<Props, TextState> {
               data.addComment.commentEdge.node
             ) {
               store.repository.issue.comments.nodes = [
-                data.addComment.commentEdge.node,
+                {...data.addComment.commentEdge.node, id: data.addComment.commentEdge.node.key},
                 ...store.repository.issue.comments.nodes
               ];
             }
